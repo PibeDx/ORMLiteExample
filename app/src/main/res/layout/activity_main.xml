@@ -1,0 +1,112 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ActivityMain" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world" />
+
+    <EditText
+        android:id="@+id/codigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView1"
+        android:ems="10"
+        android:hint="Codigo" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/codigo"
+        android:layout_alignRight="@+id/codigo"
+        android:layout_below="@+id/codigo"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Nombre" />
+
+    <Spinner
+        android:id="@+id/spListaGrupo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/nombre"
+        android:layout_below="@+id/nombre" />
+
+    <Button
+        android:id="@+id/btnInsertar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spListaGrupo"
+        android:layout_below="@+id/spListaGrupo"
+        android:layout_toLeftOf="@+id/btnListarPorGrupo"
+        android:text="Insertar" />
+
+    <Button
+        android:id="@+id/btnActualizar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnInsertar"
+        android:layout_alignBottom="@+id/btnInsertar"
+        android:layout_alignLeft="@+id/btnEliminarTodos"
+        android:layout_alignParentRight="true"
+        android:text="Actualizar" />
+
+    <Button
+        android:id="@+id/btnEliminar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnInsertar"
+        android:layout_alignRight="@+id/btnInsertar"
+        android:layout_below="@+id/btnInsertar"
+        android:text="Eliminar" />
+
+    <Button
+        android:id="@+id/btnListaTodos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnEliminar"
+        android:layout_alignRight="@+id/btnEliminar"
+        android:layout_below="@+id/btnEliminar"
+        android:text="ListarTodos" />
+
+    <Button
+        android:id="@+id/btnListarPorGrupo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnListaTodos"
+        android:layout_alignBottom="@+id/btnListaTodos"
+        android:layout_alignParentRight="true"
+        android:text="Listar por grupo" />
+
+    <Button
+        android:id="@+id/btnEliminarTodos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnListarPorGrupo"
+        android:layout_alignRight="@+id/btnListarPorGrupo"
+        android:layout_toRightOf="@+id/btnEliminar"
+        android:text="Eliminar Todos" />
+
+    <Button
+        android:id="@+id/btnExportardb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnListaTodos"
+        android:layout_alignRight="@+id/btnListaTodos"
+        android:layout_below="@+id/btnListaTodos"
+        android:text="ExportarDB" />
+
+</RelativeLayout>
